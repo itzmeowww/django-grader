@@ -1,0 +1,16 @@
+
+[Result]
+
+{% for result in results %}
+    <p>
+    {{result.result}}
+    </p>
+{% endfor %}
+
+[Problem]
+
+{% for problem in problems %}
+    <p>
+    <a href = "{% url 'problem' problem.pk %}">{{problem.title}}</a>
+    </p>
+{% endfor %}

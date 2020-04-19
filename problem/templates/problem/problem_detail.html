@@ -1,0 +1,22 @@
+<p>{{object.title}}</p>
+<p>[Result]</p>
+
+{% for result in results %}
+    <p>
+    {{result.result}}
+    </p>
+{% endfor %}
+
+<p>[Problem]</p>
+
+<p>{{problem}}</p>
+
+
+<form method = "POST" enctype="multipart/form-data">
+<div class="errorlist"></div>
+{% csrf_token %}
+
+{{form}}
+<button type="submit">Submit
+</button>
+</form>
