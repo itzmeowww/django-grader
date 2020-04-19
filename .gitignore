@@ -2,3 +2,9 @@
 temp_file
 db.sqlite3
 myenv
+
+.env
+__pycache__/
+.DS_Store
+
+# HINT : USE STH LIKE GITIGNORE GENERATOR HELPS

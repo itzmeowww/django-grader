@@ -39,6 +39,9 @@ def gradingSystem(file, problem, user, problemResult):
 
     temp_file = os.path.join(grader.settings.BASE_DIR,
                              f'temp_file\\{problemResult.pk}')
+    if (os.name != 'nt') :
+        temp_file = os.path.join(grader.settings.BASE_DIR,
+                             f'temp_file/{problemResult.pk}')
     print(temp_file)
     path = default_storage.save(f'{temp_file}.cpp', ContentFile(file.read()))
 
